@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Jogo de Baralho - 21 atualizado/1.0.0": {
+        "runtime": {
+          "Jogo de Baralho - 21 atualizado.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Jogo de Baralho - 21 atualizado/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

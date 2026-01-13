@@ -1,0 +1,15 @@
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\bin\Debug\net8.0\Jogo de Baralho - 21 atualizado.exe
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\bin\Debug\net8.0\Jogo de Baralho - 21 atualizado.deps.json
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\bin\Debug\net8.0\Jogo de Baralho - 21 atualizado.runtimeconfig.json
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\bin\Debug\net8.0\Jogo de Baralho - 21 atualizado.dll
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\bin\Debug\net8.0\Jogo de Baralho - 21 atualizado.pdb
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.AssemblyInfoInputs.cache
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.AssemblyInfo.cs
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.csproj.CoreCompileInputs.cache
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.sourcelink.json
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.dll
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\refint\Jogo de Baralho - 21 atualizado.dll
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.pdb
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Jogo de Baralho - 21 atualizado.genruntimeconfig.cache
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\ref\Jogo de Baralho - 21 atualizado.dll
