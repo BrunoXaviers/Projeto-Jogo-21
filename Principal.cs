@@ -25,6 +25,28 @@ namespace Jogo_de_Baralho
             int carta = r.Embaralhar();
             Console.WriteLine(carta);
         }
+        public void menu()
+        {
+            int opcao = 0;
+            do
+            {
+                Console.WriteLine("BEM-VINDO AO 21");
+                Console.WriteLine("O JOGO CONSISTE EM DOIS JOGADORES, ONDE CADA UM DELES RECEBE DUAS CARTAS");
+                Console.WriteLine("NO COMEÇO DO JOGO, ELES PODEM PEDIR MAIS CARTAS ATE ATINGIR O VALOR DE 21 OU");
+                Console.WriteLine("PASSAR DE 21, VENCENDO O JOGO QUEM CHEGAR MAIS PERTO DE 21 SEM PASSAR.");
+                Console.WriteLine("1 - INICIAR JOGO");
+                Console.WriteLine("0 - SAIR");
+                Console.WriteLine();
+                opcao = int.Parse(Console.ReadLine());
+                Console.Clear();
+                int jogo = 0;
+                do
+                {
+
+                } while (jogo != 0);
+            }while(opcao != 0);
+            
+        }
     }
 }
 

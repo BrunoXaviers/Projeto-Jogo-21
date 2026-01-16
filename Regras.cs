@@ -16,7 +16,7 @@ namespace Jogo_de_Baralho
 {
     internal class Regras:Baralho
     {
-        public void TirarCarta(List<int> lista, Stack<int> pilha)
+        public void tirarCarta(List<int> lista, Stack<int> pilha)
         {
             Random rnd = new Random();
             int cartaAleatoria = rnd.Next(0, lista.Count);
@@ -32,27 +32,51 @@ namespace Jogo_de_Baralho
             switch (naipeAleatorio)
             {
                 case 1:
-                    TirarCarta(ouros, pilha);
+                    tirarCarta(ouros, pilha);
                     break;
                 case 2:
-                    TirarCarta(paus, pilha);
+                    tirarCarta(paus, pilha);
                     break;
                 case 3:
-                    TirarCarta(espadas, pilha);
+                    tirarCarta(espadas, pilha);
                     break;
                 case 4:
-                    TirarCarta(copas, pilha);
+                    tirarCarta(copas, pilha);
                     break;
             }
         }
 
-        public void DistribuirCartas()
+        public void distribuirCartas()
         {
             for(int i = 0; i < 2; i++)
             {
                 SortearCarta(pilhaJogadorUm);
                 SortearCarta(pilhaJogadorDois);
             }
+        }
+
+        public void mostrarCartas(Stack<int> pilha)
+        {
+            foreach (int carta in pilha)
+            {
+                Console.WriteLine(carta);
+            }
+        }
+
+        public int somarCartas(Stack<int> pilha)
+        {
+            int soma = 0;
+            foreach(int carta in pilha)
+            {
+                soma += carta;
+            }
+            return soma;
+        }
+        public bool verificarEstouro(Stack<int> pilha)
+        {
+            int soma = somarCartas(pilha);
+            if (soma > 21) return false;
+            return true;
         }
     }
 }
