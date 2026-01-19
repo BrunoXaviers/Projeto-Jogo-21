@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +18,14 @@ PASSAR DE 21, VENCENDO O JOGO QUEM CHEGAR MAIS PERTO DE 21 SEM PASSAR.
  ******************************************************/
 namespace Jogo_de_Baralho
 {
-    public class Principal
+    public class Principal:Regras 
     {
         public static void Main()
         {
-            Regras r = new Regras();
-            int carta = r.Embaralhar();
-            Console.WriteLine(carta);
+            menu();
         }
+
+
         public void menu()
         {
             int opcao = 0;
@@ -41,8 +42,8 @@ namespace Jogo_de_Baralho
                 Console.Clear();
                 int jogo = 0;
                 do
-                {
-
+                { 
+                    
                 } while (jogo != 0);
             }while(opcao != 0);
             
