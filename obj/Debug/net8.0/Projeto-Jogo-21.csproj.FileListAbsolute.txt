@@ -1,0 +1,5 @@
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Projeto-Jogo-21.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Projeto-Jogo-21.AssemblyInfoInputs.cache
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Projeto-Jogo-21.AssemblyInfo.cs
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Projeto-Jogo-21.csproj.CoreCompileInputs.cache
+C:\Users\spxcl\source\repos\JogoDeBaralho\Jogo de Baralho - 21 atualizado\Jogo de Baralho - 21 atualizado\obj\Debug\net8.0\Projeto-Jogo-21.sourcelink.json

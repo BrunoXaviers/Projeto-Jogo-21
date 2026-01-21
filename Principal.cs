@@ -18,7 +18,7 @@ PASSAR DE 21, VENCENDO O JOGO QUEM CHEGAR MAIS PERTO DE 21 SEM PASSAR.
  ******************************************************/
 namespace Jogo_de_Baralho
 {
-    public class Principal:Regras 
+    public class Principal
     {
         public static void Main()
         {
@@ -26,11 +26,12 @@ namespace Jogo_de_Baralho
         }
 
 
-        public void menu()
+        public static void menu()
         {
             int opcao = 0;
             do
             {
+                Regras regras = new Regras();
                 Console.WriteLine("BEM-VINDO AO 21");
                 Console.WriteLine("O JOGO CONSISTE EM DOIS JOGADORES, ONDE CADA UM DELES RECEBE DUAS CARTAS");
                 Console.WriteLine("NO COMEÇO DO JOGO, ELES PODEM PEDIR MAIS CARTAS ATE ATINGIR O VALOR DE 21 OU");
@@ -42,8 +43,9 @@ namespace Jogo_de_Baralho
                 Console.Clear();
                 int jogo = 0;
                 do
-                { 
-                    
+                {
+                    regras.iniciarJogo();
+                    regras.continuarJogo();
                 } while (jogo != 0);
             }while(opcao != 0);
             

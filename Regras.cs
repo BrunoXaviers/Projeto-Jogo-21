@@ -76,8 +76,8 @@ namespace Jogo_de_Baralho
         public bool verificarEstouro(Stack<int> pilha)
         {
             int soma = somarCartas(pilha);
-            if (soma > 21) return false;
-            return true;
+            if (soma > 21) return true;
+            return false;
         }
 
         public int compararJogadores(Stack<int> pilha1, Stack<int> pilha2)
@@ -104,7 +104,61 @@ namespace Jogo_de_Baralho
 
         public void continuarJogo()
         {
-             
+            int opcao1 = 0, opcao2 = 0;
+            do
+            {
+                Console.WriteLine("JOGADOR 1, DESEJA MAIS UMA CARTA? (0 - NÃO / 1 - SIM)");
+                opcao1 = int.Parse(Console.ReadLine());
+                if (opcao1 == 1)
+                {
+                    sortearCarta(pilhaJogadorUm);
+                    mostrarCartas(pilhaJogadorUm);
+                    Console.WriteLine($"Soma das cartas = {somarCartas(pilhaJogadorUm)}");
+                    if (verificarEstouro(pilhaJogadorUm) == true)
+                    {
+                        Console.WriteLine("Você estourou! Fim de jogo.");
+                        opcao1 = 0;
+                    }
+                }
+            } while (opcao1 != 0);
+
+            do
+            {
+                Console.WriteLine("JOGADOR 2, DESEJA MAIS UMA CARTA? (0 - NÃO / 1 - SIM)");
+                opcao2 = int.Parse(Console.ReadLine());
+                if (opcao2 == 1)
+                {
+                    sortearCarta(pilhaJogadorDois);
+                    mostrarCartas(pilhaJogadorDois);
+                    Console.WriteLine($"Soma das cartas = {somarCartas(pilhaJogadorDois)}");
+                }
+            } while (opcao2 != 0);
+            Console.WriteLine("Resultados...");
+            Console.WriteLine("pressione qualquer tecla para continuar e dê enter");
+            string teclaQualquer = Console.ReadLine();
+            if (teclaQualquer != "") resultadoJogo();
         }
+
+        public void resultadoJogo()
+        {
+            Console.Clear();
+            Console.WriteLine("A soma das cartas do Jogador 1 é: " + somarCartas(pilhaJogadorUm));
+            Console.WriteLine("A soma das cartas do Jogador 2 é: " + somarCartas(pilhaJogadorDois));
+
+            int vencedor = compararJogadores(pilhaJogadorUm, pilhaJogadorDois);
+            if (vencedor == 1 && !verificarEstouro(pilhaJogadorUm))
+            {
+                Console.WriteLine("Portanto, o vencedor é o Jogador: ");
+                Console.WriteLine("JOGADOR 1");
+            }
+            else if (vencedor == 2 && !verificarEstouro(pilhaJogadorDois))
+            {
+                Console.WriteLine("Portanto, o vencedor é o Jogador: ");
+                Console.WriteLine("JOGADOR 2");
+            }
+            else if (!verificarEstouro(pilhaJogadorUm) && !verificarEstouro(pilhaJogadorDois)) Console.WriteLine("EMPATE");
+            else Console.WriteLine("NENHUM JOGADOR VENCEU, AMBOS ESTOURARAM!");
+        }
+    }
     }
 }
