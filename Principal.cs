@@ -42,11 +42,9 @@ namespace Jogo_de_Baralho
                 opcao = int.Parse(Console.ReadLine());
                 Console.Clear();
                 int jogo = 0;
-                do
-                {
-                    regras.iniciarJogo();
-                    regras.continuarJogo();
-                } while (jogo != 0);
+                regras.iniciarJogo();
+                regras.continuarJogo();
+
             }while(opcao != 0);
             
         }

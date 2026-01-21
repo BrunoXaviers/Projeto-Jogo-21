@@ -16,9 +16,9 @@ namespace Jogo_de_Baralho
 {
     internal class Regras : Baralho
     {
+        Random rnd = new Random();
         public void tirarCarta(List<int> lista, Stack<int> pilha)
         {
-            Random rnd = new Random();
             int cartaAleatoria = rnd.Next(0, lista.Count);
             int cartaRetirada = lista[cartaAleatoria];
             lista.RemoveAt(cartaAleatoria);
@@ -27,7 +27,6 @@ namespace Jogo_de_Baralho
 
         public void sortearCarta(Stack<int> pilha)
         {
-            Random rnd = new Random();
             int naipeAleatorio = rnd.Next(1, 5);
             switch (naipeAleatorio)
             {
@@ -85,9 +84,10 @@ namespace Jogo_de_Baralho
 
             int soma1 = somarCartas(pilha1);
             int soma2 = somarCartas(pilha2);
-            if (soma1 > soma2) return 1;
-            else if(soma2 > soma1) return 2;
-            else return 3;
+            if (soma1 > soma2 && soma1 <= 21) return 1;
+            else if(soma2 > soma1 && soma2 <= 21) return 2;
+            else if(soma1 == soma2 && soma1 <= 21 && soma2 <= 21) return 3;
+            else return 4;
         }
 
         public void iniciarJogo()
@@ -131,12 +131,17 @@ namespace Jogo_de_Baralho
                     sortearCarta(pilhaJogadorDois);
                     mostrarCartas(pilhaJogadorDois);
                     Console.WriteLine($"Soma das cartas = {somarCartas(pilhaJogadorDois)}");
+                    if (verificarEstouro(pilhaJogadorDois) == true)
+                    {
+                        Console.WriteLine("Você estourou! Fim de jogo.");
+                        opcao2 = 0;
+                    }
                 }
             } while (opcao2 != 0);
             Console.WriteLine("Resultados...");
-            Console.WriteLine("pressione qualquer tecla para continuar e dê enter");
+            Console.WriteLine("s para continuar");
             string teclaQualquer = Console.ReadLine();
-            if (teclaQualquer != "") resultadoJogo();
+            if (teclaQualquer == "s ") resultadoJogo();
         }
 
         public void resultadoJogo()
@@ -156,9 +161,8 @@ namespace Jogo_de_Baralho
                 Console.WriteLine("Portanto, o vencedor é o Jogador: ");
                 Console.WriteLine("JOGADOR 2");
             }
-            else if (!verificarEstouro(pilhaJogadorUm) && !verificarEstouro(pilhaJogadorDois)) Console.WriteLine("EMPATE");
+            else if (vencedor == 3) Console.WriteLine("EMPATE");
             else Console.WriteLine("NENHUM JOGADOR VENCEU, AMBOS ESTOURARAM!");
         }
-    }
     }
 }
