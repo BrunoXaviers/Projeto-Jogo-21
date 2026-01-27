@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 Cada jogador recebe 2 cartas de inicio e confere suas cartas
 E logo após faz o somatório das cartas
 Caso ele queira pedir mais uma carta, só tirar mais uma do baralho
-Ao final confere quem está mais próximo de 21 sem passar
-O jogador que passar de 21 ou chegar mais próximo ao numero vence
+Ao final confere quem tem um somatório maior sem passar de 21
  */
 
 namespace Jogo_de_Baralho
 {
-    internal class Regras : Baralho
+    internal class Jogo : Baralho
     {
         Random rnd = new Random();
         public void tirarCarta(List<int> lista, Stack<int> pilha)
@@ -84,10 +83,16 @@ namespace Jogo_de_Baralho
 
             int soma1 = somarCartas(pilha1);
             int soma2 = somarCartas(pilha2);
-            if (soma1 > soma2 && soma1 <= 21) return 1;
-            else if(soma2 > soma1 && soma2 <= 21) return 2;
-            else if(soma1 == soma2 && soma1 <= 21 && soma2 <= 21) return 3;
-            else return 4;
+            if(!verificarEstouro(pilha1))
+            {
+                if(soma1 > soma2) return 1;
+            }
+            else if(!verificarEstouro(pilha2))
+            {
+                if(soma2 > soma1) return 2;
+            }
+            else if(soma1 == soma2 && !verificarEstouro(pilha1) && !verificarEstouro(pilha2)) return 3;
+            return 4;
         }
 
         public void iniciarJogo()
@@ -114,7 +119,7 @@ namespace Jogo_de_Baralho
                     sortearCarta(pilhaJogadorUm);
                     mostrarCartas(pilhaJogadorUm);
                     Console.WriteLine($"Soma das cartas = {somarCartas(pilhaJogadorUm)}");
-                    if (verificarEstouro(pilhaJogadorUm) == true)
+                    if (verificarEstouro(pilhaJogadorUm))
                     {
                         Console.WriteLine("Você estourou! Fim de jogo.");
                         opcao1 = 0;
@@ -131,7 +136,7 @@ namespace Jogo_de_Baralho
                     sortearCarta(pilhaJogadorDois);
                     mostrarCartas(pilhaJogadorDois);
                     Console.WriteLine($"Soma das cartas = {somarCartas(pilhaJogadorDois)}");
-                    if (verificarEstouro(pilhaJogadorDois) == true)
+                    if (verificarEstouro(pilhaJogadorDois))
                     {
                         Console.WriteLine("Você estourou! Fim de jogo.");
                         opcao2 = 0;
@@ -141,7 +146,7 @@ namespace Jogo_de_Baralho
             Console.WriteLine("Resultados...");
             Console.WriteLine("s para continuar");
             string teclaQualquer = Console.ReadLine();
-            if (teclaQualquer == "s ") resultadoJogo();
+            if (teclaQualquer == "s" || teclaQualquer == "S") resultadoJogo();
         }
 
         public void resultadoJogo()
@@ -151,12 +156,12 @@ namespace Jogo_de_Baralho
             Console.WriteLine("A soma das cartas do Jogador 2 é: " + somarCartas(pilhaJogadorDois));
 
             int vencedor = compararJogadores(pilhaJogadorUm, pilhaJogadorDois);
-            if (vencedor == 1 && !verificarEstouro(pilhaJogadorUm))
+            if (vencedor == 1)
             {
                 Console.WriteLine("Portanto, o vencedor é o Jogador: ");
                 Console.WriteLine("JOGADOR 1");
             }
-            else if (vencedor == 2 && !verificarEstouro(pilhaJogadorDois))
+            else if (vencedor == 2)
             {
                 Console.WriteLine("Portanto, o vencedor é o Jogador: ");
                 Console.WriteLine("JOGADOR 2");
