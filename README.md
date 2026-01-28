@@ -1,10 +1,4 @@
-Perfeito 😄
-Aqui está um **README.md acadêmico, organizado, claro e com linguagem profissional**, pronto pra colar no seu repositório.
-Ele está no padrão que professores e avaliadores gostam ✅
-
----
-
-# 🎴 Projeto Jogo 21 (Blackjack Simplificado)
+# 🎴 Projeto Jogo 21 
 
 ## 📚 Descrição do Projeto
 
