@@ -16,7 +16,7 @@ PASSAR DE 21, VENCENDO O JOGO QUEM TIVER UM VALOR MAIOR QUE O OUTRO SEM PASSAR D
 - CADA JOGADOR RECEBE DUAS CARTAS INICIAIS
 
  ******************************************************/
-namespace Jogo_de_Baralho
+namespace Projeto_Jogo_21
 {
     public class Principal
     {
@@ -31,20 +31,25 @@ namespace Jogo_de_Baralho
             int opcao = 0;
             do
             {
-                Jogo regras = new Jogo();
+
+                Mesa mesa = new Mesa();
+                Console.WriteLine("============================================================================");
                 Console.WriteLine("BEM-VINDO AO 21");
                 Console.WriteLine("O JOGO CONSISTE EM DOIS JOGADORES, ONDE CADA UM DELES RECEBE DUAS CARTAS");
                 Console.WriteLine("NO COMEÇO DO JOGO, ELES PODEM PEDIR MAIS CARTAS ATE ATINGIR O VALOR DE 21 OU");
                 Console.WriteLine("PASSAR DE 21, VENCENDO O JOGO QUEM CHEGAR MAIS PERTO DE 21 SEM PASSAR.");
+                Console.WriteLine("As cartas J, Q, K valem 10 pontos cada e o Ás vale 1 ponto.");
                 Console.WriteLine("1 - INICIAR JOGO");
                 Console.WriteLine("0 - SAIR");
-                Console.WriteLine();
+                Console.WriteLine("============================================================================");
                 opcao = int.Parse(Console.ReadLine());
                 if(opcao == 1)
                 {
                     Console.Clear();
-                    regras.iniciarJogo();
-                    regras.continuarJogo();
+                    mesa.iniciarJogo();
+                    mesa.continuarJogo();
+                    Console.WriteLine("\nPressione qualquer tecla para voltar ao menu...");
+                    Console.ReadKey();
                 }
             }while(opcao != 0);
             

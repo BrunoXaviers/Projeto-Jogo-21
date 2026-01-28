@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Projeto-Jogo-21/1.0.0": {
+        "runtime": {
+          "Projeto-Jogo-21.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Projeto-Jogo-21/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
