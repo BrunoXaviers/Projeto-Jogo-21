@@ -34,7 +34,7 @@ namespace Projeto_Jogo_21
             Console.WriteLine($"Soma das cartas = {jogo.somarCartas(jogadorUm)}");
             Console.WriteLine("===================================================");
             Console.WriteLine($"2 - {jogadorDois.Nome}");
-            Console.WriteLine($"Cartas de {jogadorUm.Nome}");
+            Console.WriteLine($"Cartas de {jogadorDois.Nome}");
             jogadorDois.mostrarCartas();
             Console.WriteLine($"Soma das cartas = {jogo.somarCartas(jogadorDois)}");
         }
